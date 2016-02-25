@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="VO.userVO" table="login_mst">
+   
+   	<id name="User_ID" type="int" column="User_ID" >
+   		<generator class="increment"/>
+  	</id>
+
+  	<property name="User_E_id">
+   		<column name="User_E_id" />
+  	</property>
+  	
+  	<property name="password">
+   		<column name="password" />
+  	</property>
+  
+  	<many-to-one name="Role_ID" column="Role_ID" class="VO.roleVO"></many-to-one>
+  	
+  	<property name="User_Fname">
+   		<column name="User_Fname" />
+  	</property>
+  	
+  	<property name="User_Lname">
+   		<column name="User_Lname" />
+  	</property>
+  	
+  	<property name="Address">
+   		<column name="Address" />
+  	</property>
+  	
+  	<property name="PH_no">
+   		<column name="PH_no" />
+  	</property>
+  	
+  	<property name="MO_no">
+   		<column name="MO_no" />
+  	</property>
+  	
+  	<property name="hint_que">
+   		<column name="hint_que" />
+  	</property>
+  	
+  	<property name="hint_ans">
+   		<column name="hint_ans" />
+  	</property>
+  	
+  <property name="Activation">
+   		<column name="Activation" />
+  	</property>
+  
+ </class>
+
+</hibernate-mapping>

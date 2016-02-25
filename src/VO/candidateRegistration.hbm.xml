@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="VO.candidateRegistratioVO" table="candidate_mst">
+   
+   	<id name="Cndt_ID" type="int" column="Cndt_ID" >
+   		<generator class="increment"/>
+  	</id>
+
+  	<property name="Cndt_Resume">
+   		<column name="Cndt_Resume" />
+  	</property>
+  
+  	<property name="Cndt_Refrence">
+  		<column name="Cndt_Refrence"/>
+  	</property>
+  <many-to-one name="Cat_ID" column="Cat_ID" class="VO.jobCategoryVO"></many-to-one>
+  <many-to-one name="User_ID" column="User_ID" class="VO.userVO"></many-to-one>
+  
+ </class>
+
+</hibernate-mapping>

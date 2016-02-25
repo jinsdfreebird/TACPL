@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="VO.jobCategoryVO" table="job_cat_mst">
+   
+   	<id name="Cat_ID" type="int" column="Cat_ID" >
+   		<generator class="increment"/>
+  	</id>
+
+  	<property name="cat_name">
+   		<column name="cat_name" />
+  	</property>
+  
+  	<property name="cat_dis">
+  		<column name="cat_dis"/>
+  	</property>
+  
+ </class>
+
+</hibernate-mapping>
